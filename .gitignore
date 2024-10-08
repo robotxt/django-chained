@@ -38,3 +38,5 @@ __pycache__/
 **/*/csv_files
 
 postgres
+
+db.sqlite3

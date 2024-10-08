@@ -3,7 +3,7 @@ services:
         build: .
         env_file: .env
         volumes:
-            - ./web:/web
+            - ./web:/app/web
         ports:
             - "8000:8000"
         tty: true

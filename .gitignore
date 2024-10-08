@@ -1,0 +1,40 @@
+# Ignore IDE files
+.idea/
+**.vscode
+
+# Ignore virtual environment dirs
+**venv
+
+# Ignore pem file(s)
+**.pem
+
+# Ignore vim swap files
+**.swp
+
+# Ignore .zip files
+**.zip
+
+# Ignore OS X metadata files
+.history
+.DS_Store
+
+# Ignore environment files
+.env
+
+# Ignore pyc/cache
+*.pyc
+__pycache__/
+**.cache
+**.local
+**.ruff_cache
+
+# Ignore staticfiles
+**/*/static
+
+# Ignore fixtures
+**/*/fixtures
+
+# Ignore csv files
+**/*/csv_files
+
+postgres

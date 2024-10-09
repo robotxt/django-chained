@@ -15,3 +15,9 @@ shell:
 seed:
 	docker-compose run --rm --no-deps $(CONTAINER) \
 		python manage.py seeder
+
+
+.PHONY: unseed
+unseed:
+	docker-compose run --rm --no-deps $(CONTAINER) \
+		python manage.py unseed

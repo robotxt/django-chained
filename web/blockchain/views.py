@@ -11,7 +11,7 @@ class BaseViewSet(mixins.ListModelMixin, mixins.RetrieveModelMixin, GenericViewS
 
 class EventDataApiEndpoint(BaseViewSet):
     serializer_class = EventDataSerializer
-    queryset = EventData.objects.all()
+    queryset = EventData.objects.filter(deleted_at=None)
 
     def list(self, request):
         events = self.get_queryset()

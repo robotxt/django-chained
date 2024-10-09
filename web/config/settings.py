@@ -42,6 +42,7 @@ INSTALLED_APPS = [
     "django.contrib.sessions",
     "django.contrib.messages",
     "django.contrib.staticfiles",
+    "django_extensions",
     "blockchain",
 ]
 
@@ -126,4 +127,9 @@ STATIC_URL = "static/"
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.1/ref/settings/#default-auto-field
 
+
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
+INFURA_APIKEY = os.environ["INFURA_APIKEY"]
+INFURA_MAINNET_WSS = f"wss://mainnet.infura.io/ws/v3/{INFURA_APIKEY}"
+INFURA_MAINNET_HTTP = f"https://mainnet.infura.io/v3/{INFURA_APIKEY}"
+BAYC_ADDRESS = "0xBC4CA0eda7647A8ab7C2061c2e118a18a936f13D"

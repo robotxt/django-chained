@@ -20,7 +20,7 @@ class Command(BaseCommand):
         # This will return 10000 records
         event_filter = contract.events.Transfer.create_filter(from_block="0xBB933A", to_block="0xBC676B")
 
-        items = event_filter.get_all_entries()[-10:]  # store the last 10 results
+        items = event_filter.get_all_entries()[-10:]  # get the last 10 results
         transfer_events = []
         for item in items:
             data = json.loads(Web3.to_json(item))

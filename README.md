@@ -26,3 +26,15 @@ make seed
 ```python
 python manage.py seeder
 ```
+
+### API Endpoints
+
+#### List of Events API
+```
+http://localhost:8000/api/events/
+```
+
+#### Event Details API
+```
+http://localhost:8000/api/events/<token_id>/
+```

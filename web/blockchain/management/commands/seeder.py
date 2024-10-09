@@ -10,7 +10,7 @@ class Command(BaseCommand):
     help = "Retrieve Contract Events"
 
     def handle(self, *args, **options):
-        with open('blockchain/abi.json', 'r') as abi_definition:
+        with open("blockchain/abi.json", "r") as abi_definition:
             abi = json.load(abi_definition)
 
         w3 = Web3(Web3.HTTPProvider(settings.INFURA_MAINNET_HTTP))
@@ -26,13 +26,15 @@ class Command(BaseCommand):
             data = json.loads(Web3.to_json(item))
             event_args = data["args"]
 
-            transfer_events.append(EventData(
-                nft_address=address,
-                token_id=event_args["tokenId"],
-                block_number=data["blockNumber"],
-                from_address=event_args["from"],
-                to_address=event_args["to"],
-                transaction_hash=data["transactionHash"]
-            ))
+            transfer_events.append(
+                EventData(
+                    nft_address=address,
+                    token_id=event_args["tokenId"],
+                    block_number=data["blockNumber"],
+                    from_address=event_args["from"],
+                    to_address=event_args["to"],
+                    transaction_hash=data["transactionHash"],
+                )
+            )
 
         EventData.objects.bulk_create(transfer_events)

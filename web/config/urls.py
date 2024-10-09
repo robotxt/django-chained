@@ -16,8 +16,10 @@ Including another URLconf
 """
 
 from django.contrib import admin
-from django.urls import path
+from django.urls import path, include
+from blockchain.routers import router as blockchain_router
 
 urlpatterns = [
+    path("api/", include(blockchain_router.urls)),
     path("admin/", admin.site.urls),
 ]

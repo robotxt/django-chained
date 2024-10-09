@@ -14,7 +14,7 @@ mv template.env .env
 docker-compose up --build
 ```
 
-### Run the management command to get the Transfer Events
+### Management command to get the Transfer Events
 #### Using makefile
 
 ```makefile
@@ -25,6 +25,19 @@ make seed
 
 ```python
 python manage.py seeder
+```
+
+### Management command to delete event data
+#### Using makefile
+
+```makefile
+make unseed
+```
+
+#### Using manage command 
+
+```python
+python manage.py unseed 
 ```
 
 ### API Endpoints

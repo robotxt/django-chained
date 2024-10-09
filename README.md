@@ -2,10 +2,10 @@
 
 ### Create environment variables:
 
-Rename template.env to .env
+Copy template.env to .env
 
 ```bash
-mv template.env .env
+cp template.env .env
 ```
 
 ### Run docker compose
